@@ -564,7 +564,7 @@
         .pricing-container {
             display: flex;
             justify-content: center;
-            gap: 40px 30px;
+            gap: 60px 30px; /* Increased vertical gap to 60px to match program look and account for scaling */
             flex-wrap: wrap;
             margin-top: 40px;
             padding: 20px 0;
@@ -893,9 +893,12 @@
 
         /* Responsive Design Rules */
         @media (max-width: 1200px) {
-            .card-container,
+            .card-container {
+                gap: 36px 20px; /* 36px vertical, 20px horizontal */
+            }
+
             .pricing-container {
-                gap: 20px;
+                gap: 56px 20px; /* 56px vertical, 20px horizontal to ensure spacing between rows matches the program look */
             }
 
             .card,
@@ -990,13 +993,12 @@
 
             .card-container,
             .step-container {
-                gap: 20px;
+                gap: 24px 20px; /* Slightly more vertical spacing on mobile */
                 max-width: 100%;
             }
 
             .pricing-container {
-                gap: 36px 20px;
-                /* Strong vertical spacing gap on mobile */
+                gap: 48px 20px; /* Strong vertical spacing gap on mobile */
                 max-width: 100%;
             }
 
