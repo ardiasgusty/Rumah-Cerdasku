@@ -892,17 +892,32 @@
         }
 
         /* Responsive Design Rules */
+        @media (max-width: 1200px) {
+            .card-container,
+            .pricing-container {
+                gap: 20px;
+            }
+
+            .card,
+            .pricing-card {
+                flex: 1 1 270px;
+                max-width: 340px;
+            }
+        }
+
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 42px;
             }
 
-            .pricing-card.featured {
-                transform: scale(1);
+            .pricing-card.featured,
+            .pricing-card.eksklusif-card {
+                transform: scale(1) !important;
             }
 
-            .pricing-card.featured:hover {
-                transform: translateY(-8px);
+            .pricing-card.featured:hover,
+            .pricing-card.eksklusif-card:hover {
+                transform: translateY(-8px) !important;
             }
         }
 
