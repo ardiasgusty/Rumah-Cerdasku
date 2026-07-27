@@ -4,123 +4,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bimbingan Belajar Rumah Cerdasku - Teman Belajar Terbaikmu!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- SEO Optimization Meta Tags -->
+    <title>Bimbingan Belajar Rumah Cerdasku | Bimbel Terbaik di Jakarta Barat</title>
+    <meta name="description" content="Rumah Cerdasku adalah bimbingan belajar terbaik untuk program Calistung, SD, dan SMP di Cengkareng, Jakarta Barat. Belajar menyenangkan dengan metode interaktif & guru berkompeten.">
+    <meta name="keywords" content="rumah cerdasku, bimbingan belajar jakarta barat, bimbel cengkareng, les calistung jakarta barat, les privat sd, bimbingan belajar smp, bimbel terdekat, les baca tulis hitung">
+    <meta name="author" content="Rumah Cerdasku">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.rumahcerdasku.sch.id">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.rumahcerdasku.sch.id">
+    <meta property="og:title" content="Bimbingan Belajar Rumah Cerdasku | Bimbel Terbaik di Jakarta Barat">
+    <meta property="og:description" content="Program bimbingan belajar interaktif untuk Calistung, SD, dan SMP dengan biaya terjangkau di Cengkareng, Jakarta Barat. Hubungi kami untuk trial gratis!">
+    <meta property="og:image" content="https://www.rumahcerdasku.sch.id/assets/img/logo-rumah-cerdasku.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.rumahcerdasku.sch.id">
+    <meta property="twitter:title" content="Bimbingan Belajar Rumah Cerdasku | Bimbel Terbaik di Jakarta Barat">
+    <meta property="twitter:description" content="Program bimbingan belajar interaktif untuk Calistung, SD, dan SMP dengan biaya terjangkau di Cengkareng, Jakarta Barat.">
+    <meta property="twitter:image" content="https://www.rumahcerdasku.sch.id/assets/img/logo-rumah-cerdasku.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="https://www.rumahcerdasku.sch.id/assets/img/logo-rumah-cerdasku.webp">
+
+    <!-- Google Fonts: Plus Jakarta Sans for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema Markup JSON-LD for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bimbingan Belajar Rumah Cerdasku",
+      "image": "https://www.rumahcerdasku.sch.id/assets/img/logo-rumah-cerdasku.webp",
+      "@id": "https://www.rumahcerdasku.sch.id",
+      "url": "https://www.rumahcerdasku.sch.id",
+      "telephone": "+6282224000610",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Al-Barkah II RT 002/003 No.37, RT.2/RW.3, Rw. Buaya, Kecamatan Cengkareng",
+        "addressLocality": "Jakarta Barat",
+        "addressRegion": "DKI Jakarta",
+        "postalCode": "11740",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.155447,
+        "longitude": 106.726528
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/rumahcerdasku"
+      ]
+    }
+    </script>
+
     <style>
-        /* CSS Reset & Variables */
+        /* CSS Custom Properties / Design System */
+        :root {
+            --primary: #1A3449;       /* Deep Navy Blue from Logo Circle */
+            --secondary: #8B1527;     /* Red Maroon from Logo Ribbon/Text */
+            --accent: #D49D35;        /* Gold Accent matching Wheat/Stars */
+            --accent-hover: #C28D2B;  
+            --bg-light: #F8FAFC;      /* Soft cool white */
+            --text-dark: #0F172A;     /* Slate 900 */
+            --text-muted: #475569;    /* Slate 600 */
+            --white: #FFFFFF;
+            
+            /* Shadows & Border Radii */
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 10px 25px -5px rgba(26, 52, 73, 0.08), 0 8px 10px -6px rgba(26, 52, 73, 0.08);
+            --shadow-lg: 0 20px 40px -15px rgba(26, 52, 73, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
-        }
-
-        :root {
-            --red: #FF6B6B;
-            --blue: #4ECDC4;
-            --yellow: #FFE66D;
-            --dark: #292F36;
-            --white: #FFFFFF;
-            --green: #A8E6CF;
-            --purple: #D4A5A5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #F7F9F9;
-            color: var(--dark);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Navigation */
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Navigation Header with Glassmorphism */
         header {
-            background-color: var(--white);
-            padding: 20px 5%;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 16px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 1px solid rgba(26, 52, 73, 0.06);
+            transition: var(--transition);
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 900;
-            color: var(--red);
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+
+        .brand-subtitle {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--secondary);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--dark);
-            margin-left: 20px;
-            font-weight: 700;
-            transition: color 0.3s;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            position: relative;
         }
 
-        nav a:hover {
-            color: var(--blue);
+        nav a:not(.btn-daftar-nav)::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:not(.btn-daftar-nav):hover {
+            color: var(--secondary);
+        }
+
+        nav a:not(.btn-daftar-nav):hover::after {
+            width: 100%;
         }
 
         .btn-daftar-nav {
-            background-color: var(--yellow);
-            padding: 10px 20px;
-            border-radius: 25px;
-            color: var(--dark);
-            border: 2px solid var(--dark);
+            background-color: var(--secondary);
+            color: var(--white) !important;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: 2px solid var(--secondary);
+            box-shadow: 0 4px 12px rgba(139, 21, 39, 0.15);
+        }
+
+        .btn-daftar-nav:hover {
+            background-color: transparent;
+            color: var(--secondary) !important;
+            box-shadow: none;
+            transform: translateY(-2px);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--blue), var(--green));
-            padding: 100px 5%;
+            background: linear-gradient(135deg, var(--primary) 0%, #203f59 100%);
+            padding: 120px 5% 100px 5%;
             text-align: center;
-            color: var(--dark);
-            border-bottom: 8px wave var(--yellow);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative background shapes for Premium look */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139, 21, 39, 0.2) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 157, 53, 0.15) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--dark);
+            font-size: 54px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--white);
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
         }
 
         .hero p {
             font-size: 20px;
             margin-bottom: 40px;
-            max-width: 600px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            max-width: 680px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .btn-primary {
-            background-color: var(--red);
-            color: var(--white);
-            padding: 15px 35px;
-            font-size: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 16px 38px;
+            font-size: 18px;
             font-weight: 700;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 8px 15px rgba(255, 107, 107, 0.4);
-            transition: transform 0.3s;
+            box-shadow: 0 10px 25px rgba(212, 157, 53, 0.3);
+            transition: var(--transition);
         }
 
         .btn-primary:hover {
-            transform: translateY(-5px);
+            background-color: var(--white);
+            color: var(--secondary);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
         }
 
         /* Programs Section */
         .programs {
-            padding: 80px 5%;
+            padding: 100px 5%;
             text-align: center;
+            background-color: var(--white);
         }
 
         .section-title {
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: var(--dark);
+            font-size: 38px;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            font-weight: 500;
         }
 
         .card-container {
@@ -132,123 +358,418 @@
 
         .card {
             background: var(--white);
-            border-radius: 20px;
-            padding: 40px 20px;
+            border-radius: var(--radius-md);
+            padding: 45px 30px;
             width: 100%;
-            max-width: 350px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-            border: 4px solid transparent;
+            max-width: 360px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid rgba(26, 52, 73, 0.05);
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
         }
 
         .card:hover {
             transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .card.calistung {
-            border-color: var(--yellow);
+        .card.calistung::before { background-color: var(--accent); }
+        .card.sd::before { background-color: var(--primary); }
+        .card.smp::before { background-color: var(--secondary); }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
         }
 
-        .card.sd {
-            border-color: var(--blue);
-        }
-
-        .card.smp {
-            border-color: var(--red);
-        }
+        .card.calistung .card-icon { background-color: rgba(212, 157, 53, 0.1); color: var(--accent); }
+        .card.sd .card-icon { background-color: rgba(26, 52, 73, 0.1); color: var(--primary); }
+        .card.smp .card-icon { background-color: rgba(139, 21, 39, 0.1); color: var(--secondary); }
 
         .card h3 {
             font-size: 24px;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            color: var(--primary);
         }
 
-        .card.calistung h3 {
-            color: #d4a300;
-        }
-
-        .card.sd h3 {
-            color: var(--blue);
-        }
-
-        .card.smp h3 {
-            color: var(--red);
+        .card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+            line-height: 1.5;
         }
 
         .card ul {
-            text-align: left;
-            margin-top: 20px;
-            list-style-type: '🌟 ';
-            padding-left: 20px;
+            list-style: none;
+            margin-top: auto;
         }
 
         .card ul li {
-            margin-bottom: 10px;
-            font-weight: 700;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* Registration Info Section */
-        .registration {
-            background-color: var(--yellow);
-            padding: 80px 5%;
+        .card ul li svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .card.calistung ul li svg { color: var(--accent); }
+        .card.sd ul li svg { color: var(--primary); }
+        .card.smp ul li svg { color: var(--secondary); }
+
+        /* Biaya (Pricing) Section - NEW */
+        .pricing-section {
+            padding: 100px 5%;
+            background-color: var(--bg-light);
             text-align: center;
+        }
+
+        .pendaftaran-badge {
+            background-color: rgba(139, 21, 39, 0.08);
+            border: 1px solid rgba(139, 21, 39, 0.15);
+            color: var(--secondary);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 45px 30px;
+            width: 100%;
+            max-width: 360px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid rgba(26, 52, 73, 0.05);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--secondary);
+            transform: scale(1.03);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.03) translateY(-8px);
+        }
+
+        .pricing-card.featured .popular-tag {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 4px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-card h4 {
+            font-size: 22px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .price-wrapper {
+            margin-bottom: 30px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(26, 52, 73, 0.08);
+        }
+
+        .price-currency {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-muted);
+            vertical-align: super;
+        }
+
+        .price-amount {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li svg {
+            color: var(--secondary);
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .btn-pricing {
+            margin-top: auto;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(26, 52, 73, 0.1);
+        }
+
+        .pricing-card.featured .btn-pricing {
+            background-color: var(--secondary);
+            box-shadow: 0 4px 12px rgba(139, 21, 39, 0.15);
+        }
+
+        .btn-pricing:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* Registration Process Section */
+        .registration {
+            background-color: var(--primary);
+            padding: 100px 5%;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .registration .section-title {
+            color: var(--white);
+        }
+
+        .registration .section-subtitle {
+            color: rgba(255, 255, 255, 0.85);
         }
 
         .step-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: 60px;
+            position: relative;
         }
 
         .step {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: var(--radius-md);
+            width: 100%;
+            max-width: 280px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
 
-        .step h4 {
-            font-size: 36px;
-            color: var(--red);
-            margin-bottom: 10px;
+        .step:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .step-num {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--accent);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 157, 53, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            border: 2px solid var(--accent);
         }
 
         .step p {
             font-weight: 700;
+            font-size: 16px;
+            color: var(--white);
         }
 
         .cta-daftar {
-            margin-top: 50px;
+            margin-top: 60px;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366; /* WhatsApp Brand Green */
+            color: var(--white);
+            padding: 16px 38px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: var(--transition);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba56;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark);
-            color: var(--white);
+            background-color: #0e1d29;
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
-            padding: 40px 5%;
+            padding: 60px 5% 40px 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Responsive Design */
+        .footer-logo {
+            height: 60px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        footer h5 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        footer p {
+            font-size: 15px;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.08);
+            margin: 30px 0;
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Responsive Design Rules */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            .pricing-card.featured:hover {
+                transform: translateY(-8px);
+            }
+        }
+
         @media (max-width: 768px) {
             header {
+                padding: 16px 24px;
                 flex-direction: column;
-                gap: 15px;
+                gap: 20px;
             }
 
-            nav a {
-                margin: 0 10px;
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px 20px;
+            }
+
+            .hero {
+                padding: 80px 24px 60px 24px;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .card-container, .pricing-container, .step-container {
+                gap: 20px;
             }
         }
     </style>
@@ -258,98 +779,268 @@
 
     <!-- Header & Navigasi -->
     <header>
-        <div class="logo">Bintang Ceria ⭐️</div>
+        <a href="#" class="logo-container">
+            <img src="https://www.rumahcerdasku.sch.id/assets/img/logo-rumah-cerdasku.webp" alt="Logo Rumah Cerdasku" class="logo-img">
+            <div class="brand-name">
+                <span class="brand-title">Rumah Cerdasku</span>
+                <span class="brand-subtitle">Bimbingan Belajar</span>
+            </div>
+        </a>
         <nav>
-            <a href="#program">Program Kami</a>
-            <a href="#daftar">Info Daftar</a>
+            <a href="#program">Program</a>
+            <a href="#biaya">Daftar Biaya</a>
+            <a href="#daftar">Cara Daftar</a>
             <a href="#daftar" class="btn-daftar-nav">Daftar Sekarang!</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Belajar Jadi Lebih Menyenangkan! 🚀</h1>
-        <p>Bimbingan belajar dengan metode interaktif, ceria, dan mudah dipahami. Kami siap membantu anak Anda meraih
-            prestasi gemilang dari usia dini hingga remaja.</p>
-        <a href="#daftar" class="btn-primary">Ayo Mulai Belajar!</a>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Belajar Jadi Lebih <span>Menyenangkan!</span> 🚀</h1>
+                <p>Bimbingan belajar interaktif dengan metode menyenangkan untuk meraih prestasi terbaik. Kami mendampingi tumbuh kembang edukasi anak dari tingkat Calistung, SD, hingga SMP.</p>
+                <a href="#daftar" class="btn-primary">
+                    Mulai Belajar Sekarang
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="stroke-width:2.5;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </section>
 
-    <!-- Program Section -->
-    <section id="program" class="programs">
-        <h2 class="section-title">Apa Saja Yang Dipelajari? 📚</h2>
-        <div class="card-container">
+        <!-- Program Section -->
+        <section id="program" class="programs">
+            <h2 class="section-title">Program Terbaik Kami 📚</h2>
+            <p class="section-subtitle">Didesain khusus untuk memenuhi kebutuhan belajar di setiap jenjang usia dengan metode yang disukai anak-anak.</p>
+            
+            <div class="card-container">
+                <!-- Calistung -->
+                <div class="card calistung">
+                    <div class="card-icon">
+                        <!-- Book Icon SVG -->
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="stroke-width: 2;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3>Program Calistung</h3>
+                    <p>Metode belajar membaca, menulis, dan berhitung yang interaktif dan ramah anak untuk usia prasekolah & TK.</p>
+                    <ul>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Mengenal Huruf & Suku Kata
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Membaca Tanpa Mengeja
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Menulis Huruf & Angka Rapi
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Berhitung Dasar Ceria
+                        </li>
+                    </ul>
+                </div>
 
-            <!-- Calistung -->
-            <div class="card calistung">
-                <h3>Program Calistung</h3>
-                <p>Cocok untuk usia prasekolah & TK. Belajar dasar dengan metode bermain yang seru!</p>
-                <ul>
-                    <li>Mengenal Huruf & Membaca Lancar</li>
-                    <li>Latihan Menulis Rapi</li>
-                    <li>Berhitung Dasar (Tambah & Kurang)</li>
-                    <li>Permainan Logika Sederhana</li>
-                </ul>
+                <!-- SD -->
+                <div class="card sd">
+                    <div class="card-icon">
+                        <!-- Academic Cap Icon SVG -->
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="stroke-width: 2;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"></path></svg>
+                    </div>
+                    <h3>Program SD</h3>
+                    <p>Pendampingan belajar intensif Kelas 1 - 6 SD untuk pemahaman materi harian, PR, serta persiapan ujian.</p>
+                    <ul>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Matematika & IPA Tematik
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Bahasa Indonesia & Inggris
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Pendampingan PR Sekolah
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Persiapan Ulangan Harian & Ujian
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SMP -->
+                <div class="card smp">
+                    <div class="card-icon">
+                        <!-- Chart Bar Icon SVG -->
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="stroke-width: 2;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3>Program SMP</h3>
+                    <p>Fokus bimbingan mendalam Kelas 7 - 9 SMP untuk mematangkan materi pelajaran eksakta dan persiapan ujian kelulusan.</p>
+                    <ul>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Matematika & Fisika Lanjutan
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Biaya Terpadu & Kimia Dasar
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Bahasa Inggris & Grammar
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            Metode Cepat Pembahasan Soal
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biaya Section (NEW) -->
+        <section id="biaya" class="pricing-section">
+            <h2 class="section-title">Investasi Pendidikan Terbaik 💎</h2>
+            <p class="section-subtitle">Pilihan program terjangkau dengan guru berkualitas demi masa depan cerah buah hati Anda.</p>
+            
+            <div class="pendaftaran-badge">
+                <!-- Info Icon SVG -->
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Biaya Pendaftaran Pertama: <strong>Rp 100.000</strong> (Sudah Termasuk Buku & Welcome Kit)
             </div>
 
-            <!-- SD -->
-            <div class="card sd">
-                <h3>Program SD</h3>
-                <p>Pendampingan belajar untuk siswa Kelas 1 - 6 SD agar siap menghadapi ujian sekolah.</p>
-                <ul>
-                    <li>Matematika SD</li>
-                    <li>Ilmu Pengetahuan Alam (IPA)</li>
-                    <li>Bahasa Indonesia & Tematik</li>
-                    <li>Bahasa Inggris Dasar</li>
-                </ul>
+            <div class="pricing-container">
+                <!-- Calistung Pricing -->
+                <div class="pricing-card">
+                    <h4>Program Calistung</h4>
+                    <div class="price-wrapper">
+                        <span class="price-currency">Rp</span>
+                        <span class="price-amount">250K</span>
+                        <span class="price-period">/ Bulan</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Pertemuan 3x Seminggu
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Metode Belajar Sambil Bermain
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Maksimal 5 Anak per Kelas
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Modul & Lembar Kerja Kreatif
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6282224000610?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20Calistung" target="_blank" class="btn-pricing">Daftar Calistung</a>
+                </div>
+
+                <!-- SD Pricing (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="popular-tag">Paling Populer</div>
+                    <h4>Program SD</h4>
+                    <div class="price-wrapper">
+                        <span class="price-currency">Rp</span>
+                        <span class="price-amount">300K</span>
+                        <span class="price-period">/ Bulan</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Pertemuan 3x Seminggu
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Pendampingan PR & Tugas Tematik
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Pembahasan Kisi-kisi Ujian Sekolah
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Evaluasi Belajar Setiap Bulan
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6282224000610?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20SD" target="_blank" class="btn-pricing">Daftar Program SD</a>
+                </div>
+
+                <!-- SMP Pricing -->
+                <div class="pricing-card">
+                    <h4>Program SMP</h4>
+                    <div class="price-wrapper">
+                        <span class="price-currency">Rp</span>
+                        <span class="price-amount">350K</span>
+                        <span class="price-period">/ Bulan</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Pertemuan 3x Seminggu
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Fokus Matematika, IPA, B. Inggris
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Persiapan Ujian Akhir & Asesmen
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"></path></svg>
+                            Kumpulan Soal Eksakta HOTS
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6282224000610?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20SMP" target="_blank" class="btn-pricing">Daftar Program SMP</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Process Section -->
+        <section id="daftar" class="registration">
+            <h2 class="section-title">Cara Mudah Mendaftar 📝</h2>
+            <p class="section-subtitle">Bergabung bersama keluarga besar Rumah Cerdasku hanya dalam 3 langkah mudah.</p>
+
+            <div class="step-container">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <p>Hubungi WhatsApp Admin & Konsultasikan Kebutuhan Belajar</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <p>Tentukan Pilihan Program, Jadwal Belajar, & Sesi Uji Coba</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <p>Selesaikan Biaya Registrasi & Mulai Belajar Ceria!</p>
+                </div>
             </div>
 
-            <!-- SMP -->
-            <div class="card smp">
-                <h3>Program SMP</h3>
-                <p>Bimbingan intensif untuk siswa Kelas 7 - 9 SMP dengan materi yang lebih terstruktur.</p>
-                <ul>
-                    <li>Matematika Lanjutan</li>
-                    <li>Fisika & Biologi (IPA Terpadu)</li>
-                    <li>Bahasa Inggris & Grammar</li>
-                    <li>Persiapan Ujian Akhir</li>
-                </ul>
+            <div class="cta-daftar">
+                <a href="https://wa.me/6282224000610?text=Halo%20Rumah%20Cerdasku%2C%20saya%20ingin%20tanya-tanya%20mengenai%20pendaftaran%20bimbel" target="_blank" class="btn-whatsapp">
+                    <!-- WhatsApp Icon SVG -->
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.743.002-2.602-1.01-5.05-2.85-6.892C16.64 2.128 14.191.98 11.59.98 6.155.98 1.73 5.352 1.727 10.729c-.001 1.714.463 3.39 1.343 4.888l-.997 3.64 3.735-.979zm11.587-6.99c-.295-.148-1.748-.862-2.018-.962-.27-.099-.467-.148-.663.148-.196.297-.761.962-.933 1.16-.172.197-.344.222-.64.074-.295-.148-1.246-.459-2.375-1.464-.877-.782-1.47-1.747-1.642-2.044-.172-.296-.018-.457.13-.604.133-.13.295-.345.443-.517.148-.172.196-.296.295-.493.099-.197.05-.369-.025-.518-.073-.148-.663-1.597-.908-2.189-.239-.574-.482-.496-.663-.505-.171-.007-.368-.008-.564-.008-.196 0-.515.074-.784.369-.27.296-1.031 1.011-1.031 2.466 0 1.455 1.056 2.859 1.203 3.056.147.197 2.078 3.175 5.034 4.453.703.304 1.252.486 1.68.622.709.224 1.353.193 1.862.117.568-.085 1.748-.715 1.993-1.405.245-.69.245-1.283.172-1.406-.074-.122-.27-.197-.565-.346z"/></svg>
+                    Hubungi Admin WhatsApp
+                </a>
             </div>
-
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="daftar" class="registration">
-        <h2 class="section-title">Cara Mudah Mendaftar 📝</h2>
-        <p>Hanya butuh 3 langkah untuk bergabung dengan keluarga Bintang Ceria!</p>
-
-        <div class="step-container">
-            <div class="step">
-                <h4>1</h4>
-                <p>Isi Formulir Pendaftaran Online</p>
-            </div>
-            <div class="step">
-                <h4>2</h4>
-                <p>Pilih Jadwal & Program Belajar</p>
-            </div>
-            <div class="step">
-                <h4>3</h4>
-                <p>Selesaikan Pembayaran & Mulai Belajar!</p>
-            </div>
-        </div>
-
-        <div class="cta-daftar">
-            <!-- Bisa diganti dengan link ke form Google Forms atau WhatsApp -->
-            <a href="https://wa.me/6282224000610" target="_blank" class="btn-primary"
-                style="background-color: var(--dark); color: var(--yellow);">Hubungi Kami di WhatsApp</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Bimbingan Belajar Rumah Cerdasku. Do The Best, For The Best, and Be The Best!</p>
-        <p style="margin-top: 10px; font-size: 14px;">Jl. Al-Barkah II RT 002/003 No.37, RT.2/RW.3, Rw. Buaya, Kecamatan
-            Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740</p>
+        <img src="https://www.rumahcerdasku.sch.id/assets/img/logo-rumah-cerdasku.webp" alt="Logo Rumah Cerdasku Footer" class="footer-logo">
+        <h5>Bimbingan Belajar Rumah Cerdasku</h5>
+        <p>Do The Best, For The Best, and Be The Best!</p>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.6);">
+            Jl. Al-Barkah II RT 002/003 No.37, RT.2/RW.3, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740
+        </p>
+        <div class="footer-divider"></div>
+        <p class="copyright">&copy; 2026 Bimbingan Belajar Rumah Cerdasku. All Rights Reserved.</p>
     </footer>
 
 </body>
