@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimbel Bintang Ceria - Teman Belajar Terbaikmu!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        :root {
+            --red: #FF6B6B;
+            --blue: #4ECDC4;
+            --yellow: #FFE66D;
+            --dark: #292F36;
+            --white: #FFFFFF;
+            --green: #A8E6CF;
+            --purple: #D4A5A5;
+        }
+
+        body {
+            background-color: #F7F9F9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--red);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 20px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--blue);
+        }
+
+        .btn-daftar-nav {
+            background-color: var(--yellow);
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: var(--dark);
+            border: 2px solid var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--blue), var(--green));
+            padding: 100px 5%;
+            text-align: center;
+            color: var(--dark);
+            border-bottom: 8px wave var(--yellow);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: var(--red);
+            color: var(--white);
+            padding: 15px 35px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 8px 15px rgba(255, 107, 107, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--dark);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card.calistung { border-color: var(--yellow); }
+        .card.sd { border-color: var(--blue); }
+        .card.smp { border-color: var(--red); }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card.calistung h3 { color: #d4a300; }
+        .card.sd h3 { color: var(--blue); }
+        .card.smp h3 { color: var(--red); }
+
+        .card ul {
+            text-align: left;
+            margin-top: 20px;
+            list-style-type: '🌟 ';
+            padding-left: 20px;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        /* Registration Info Section */
+        .registration {
+            background-color: var(--yellow);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .step-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .step {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .step h4 {
+            font-size: 36px;
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-weight: 700;
+        }
+
+        .cta-daftar {
+            margin-top: 50px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 5%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="logo">Bintang Ceria ⭐️</div>
+        <nav>
+            <a href="#program">Program Kami</a>
+            <a href="#daftar">Info Daftar</a>
+            <a href="#daftar" class="btn-daftar-nav">Daftar Sekarang!</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Belajar Jadi Lebih Menyenangkan! 🚀</h1>
+        <p>Bimbingan belajar dengan metode interaktif, ceria, dan mudah dipahami. Kami siap membantu anak Anda meraih prestasi gemilang dari usia dini hingga remaja.</p>
+        <a href="#daftar" class="btn-primary">Ayo Mulai Belajar!</a>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="programs">
+        <h2 class="section-title">Apa Saja Yang Dipelajari? 📚</h2>
+        <div class="card-container">
+            
+            <!-- Calistung -->
+            <div class="card calistung">
+                <h3>Program Calistung</h3>
+                <p>Cocok untuk usia prasekolah & TK. Belajar dasar dengan metode bermain yang seru!</p>
+                <ul>
+                    <li>Mengenal Huruf & Membaca Lancar</li>
+                    <li>Latihan Menulis Rapi</li>
+                    <li>Berhitung Dasar (Tambah & Kurang)</li>
+                    <li>Permainan Logika Sederhana</li>
+                </ul>
+            </div>
+
+            <!-- SD -->
+            <div class="card sd">
+                <h3>Program SD</h3>
+                <p>Pendampingan belajar untuk siswa Kelas 1 - 6 SD agar siap menghadapi ujian sekolah.</p>
+                <ul>
+                    <li>Matematika SD</li>
+                    <li>Ilmu Pengetahuan Alam (IPA)</li>
+                    <li>Bahasa Indonesia & Tematik</li>
+                    <li>Bahasa Inggris Dasar</li>
+                </ul>
+            </div>
+
+            <!-- SMP -->
+            <div class="card smp">
+                <h3>Program SMP</h3>
+                <p>Bimbingan intensif untuk siswa Kelas 7 - 9 SMP dengan materi yang lebih terstruktur.</p>
+                <ul>
+                    <li>Matematika Lanjutan</li>
+                    <li>Fisika & Biologi (IPA Terpadu)</li>
+                    <li>Bahasa Inggris & Grammar</li>
+                    <li>Persiapan Ujian Akhir</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="daftar" class="registration">
+        <h2 class="section-title">Cara Mudah Mendaftar 📝</h2>
+        <p>Hanya butuh 3 langkah untuk bergabung dengan keluarga Bintang Ceria!</p>
+        
+        <div class="step-container">
+            <div class="step">
+                <h4>1</h4>
+                <p>Isi Formulir Pendaftaran Online</p>
+            </div>
+            <div class="step">
+                <h4>2</h4>
+                <p>Pilih Jadwal & Program Belajar</p>
+            </div>
+            <div class="step">
+                <h4>3</h4>
+                <p>Selesaikan Pembayaran & Mulai Belajar!</p>
+            </div>
+        </div>
+
+        <div class="cta-daftar">
+            <!-- Bisa diganti dengan link ke form Google Forms atau WhatsApp -->
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn-primary" style="background-color: var(--dark); color: var(--yellow);">Hubungi Kami di WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Bimbel Bintang Ceria. Sahabat Belajar Anak Indonesia.</p>
+        <p style="margin-top: 10px; font-size: 14px;">Jl. Pendidikan No. 123, Tangerang Selatan</p>
+    </footer>
+
+</body>
+</html>
