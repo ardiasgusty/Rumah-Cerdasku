@@ -539,10 +539,200 @@
             box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
         }
 
+        /* Tutor Section */
+        .tutor-section {
+            padding: 100px 5%;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .tutor-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        .tutor-image-container {
+            flex: 1 1 320px;
+            max-width: 380px;
+            position: relative;
+        }
+
+        .tutor-avatar-card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(26, 52, 73, 0.05);
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .tutor-avatar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
+        }
+
+        .tutor-avatar-wrapper {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 4px solid rgba(139, 21, 39, 0.1);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-light);
+        }
+
+        .tutor-avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tutor-avatar-card h4 {
+            font-size: 22px;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .tutor-avatar-card p {
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .tutor-info {
+            flex: 1 1 500px;
+            max-width: 650px;
+        }
+
+        .tutor-badge {
+            display: inline-block;
+            background-color: rgba(212, 157, 53, 0.12);
+            color: #b27a18;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tutor-info h3 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.25;
+        }
+
+        .tutor-quote {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 4px solid var(--secondary);
+            font-style: italic;
+        }
+
+        .tutor-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            flex: 1 1 150px;
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            border-bottom: 4px solid var(--primary);
+            text-align: center;
+        }
+
+        .stat-item:nth-child(2) {
+            border-color: var(--secondary);
+        }
+
+        .stat-item:nth-child(3) {
+            border-color: var(--accent);
+        }
+
+        .stat-num {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .stat-item:nth-child(2) .stat-num {
+            color: var(--secondary);
+        }
+
+        .stat-item:nth-child(3) .stat-num {
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .tutor-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .tutor-info {
+                text-align: center;
+            }
+
+            .tutor-quote {
+                padding-left: 0;
+                border-left: none;
+                border-top: 2px solid var(--secondary);
+                border-bottom: 2px solid var(--secondary);
+                padding: 20px 0;
+            }
+
+            .tutor-stats {
+                justify-content: center;
+            }
+        }
+
         /* Biaya (Pricing) Section - NEW */
         .pricing-section {
             padding: 100px 5%;
-            background-color: var(--bg-light);
+            background-color: var(--white);
             text-align: center;
         }
 
@@ -1165,6 +1355,7 @@
             </button>
             <nav>
                 <a href="#program">Program</a>
+                <a href="#tutor">Pengajar</a>
                 <a href="#biaya">Daftar Biaya</a>
                 <a href="#daftar">Cara Daftar</a>
                 <a href="#daftar" class="btn-daftar-nav">Daftar Sekarang!</a>
@@ -1450,6 +1641,50 @@
                             Ms. Office untuk Tugas Sekolah
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutor Section -->
+        <section id="tutor" class="tutor-section">
+            <h2 class="section-title">Kenalan dengan Pengajar Yuk! 👩‍🏫</h2>
+            <p class="section-subtitle">Belajar menyenangkan dipandu langsung oleh pendiri sekaligus pengajar utama Rumah Cerdasku.</p>
+
+            <div class="tutor-container">
+                <!-- Left: Tutor Profile Card -->
+                <div class="tutor-image-container">
+                    <div class="tutor-avatar-card">
+                        <div class="tutor-avatar-wrapper">
+                            <img src="assets/img/tutor-welda.png" alt="Welda Aprilia, S.Kom." class="tutor-avatar-img">
+                        </div>
+                        <h4>Welda Aprilia, S.Kom.</h4>
+                        <p>Pendiri & Pengajar Utama</p>
+                    </div>
+                </div>
+
+                <!-- Right: Profile Info -->
+                <div class="tutor-info">
+                    <span class="tutor-badge">10+ Tahun Dedikasi Mengajar</span>
+                    <h3>Pendidikan Berkualitas untuk Masa Depan Cemerlang</h3>
+                    <div class="tutor-quote">
+                        "Saya percaya bahwa pendidikan berkualitas tidak harus selalu mahal. Berawal dari kepedulian tulus membantu anak-anak sekitar rumah belajar sejak saya masih duduk di bangku SMA, dedikasi ini terus saya jaga hingga sekarang. Di Rumah Cerdasku, saya berkomitmen memberikan pendampingan belajar yang ramah, logis, dan menyenangkan demi membantu setiap buah hati tumbuh menjadi pribadi yang percaya diri dan cerdas."
+                    </div>
+
+                    <!-- Tutor Stats -->
+                    <div class="tutor-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">200++</span>
+                            <span class="stat-label">Siswa Lulus</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Personal Coach</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">SMA - Kini</span>
+                            <span class="stat-label">Pengalaman</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
