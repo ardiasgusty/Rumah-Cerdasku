@@ -483,6 +483,38 @@
             color: var(--secondary);
         }
 
+        .card.eksklusif::before {
+            background-color: var(--secondary);
+        }
+
+        .card.matematika .card-icon {
+            background-color: rgba(139, 21, 39, 0.1);
+            color: var(--secondary);
+        }
+
+        .card.komputer .card-icon {
+            background-color: rgba(26, 52, 73, 0.1);
+            color: var(--primary);
+        }
+
+        .card.eksklusif ul li svg {
+            color: var(--secondary);
+        }
+
+        .eks-badge {
+            align-self: flex-start;
+            background-color: var(--secondary);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(139, 21, 39, 0.2);
+        }
+
         /* Biaya (Pricing) Section - NEW */
         .pricing-section {
             padding: 100px 5%;
@@ -891,7 +923,9 @@
         }
 
         @keyframes blink {
-            50% { opacity: 0.5; }
+            50% {
+                opacity: 0.5;
+            }
         }
     </style>
 </head>
@@ -1092,6 +1126,104 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- Cerdas Matematika (Eksklusif) -->
+                <div class="card matematika eksklusif">
+                    <div class="card-icon">
+                        <!-- Calculator Icon SVG -->
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" style="stroke-width: 2;">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 7h6m0 10v-3m-3-4h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 17h.01M14 21h4a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2h8z"></path>
+                        </svg>
+                    </div>
+                    <div class="eks-badge">Eksklusif</div>
+                    <h3>Cerdas Matematika</h3>
+                    <p>Bimbingan khusus matematika interaktif dengan metode logika cerdas, trik hitung cepat, dan pemecahan soal HOTS.</p>
+                    <ul>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Trik Berhitung Cepat & Praktis
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pemecahan So Soal Logika & Cerita
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Persiapan Olimpiade Sekolah
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pendampingan Kurikulum Sekolah
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cerdas Komputer (Eksklusif) -->
+                <div class="card komputer eksklusif">
+                    <div class="card-icon">
+                        <!-- Device Laptop Icon SVG -->
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" style="stroke-width: 2;">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="eks-badge">Eksklusif</div>
+                    <h3>Cerdas Komputer</h3>
+                    <p>Pembelajaran dasar IT, dasar coding & Scratch, serta penguasaan aplikasi penunjang sekolah (Word, Excel, PowerPoint).</p>
+                    <ul>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pengenalan Komputer & OS dasar
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Dasar Coding & Logika Scratch
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Desain Grafis Canva
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Ms. Office untuk Tugas Sekolah
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -1107,14 +1239,13 @@
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                         d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                Biaya Pendaftaran Pertama: <span style="text-decoration: line-through; color: #94a3b8; font-weight: 500; margin: 0 6px;">Rp 150.000</span> <strong style="color: var(--secondary); font-size: 1.15em;">Rp 50.000</strong> (Sudah Termasuk Buku & Welcome Kit)
+                              Biaya Pendaftaran Pertama: <span style="text-decoration: line-through; color: #94a3b8; font-weight: 500; margin: 0 6px;">Rp 150.000</span> <strong style="color: var(--secondary); font-size: 1.15em;">Rp 50.000</strong> (Sudah Termasuk Buku & Welcome Kit)
             </div>
 
             <div class="pricing-container">
                 <!-- Calistung Pricing -->
                 <div class="pricing-card">
-                    <h4>Program Calistung</h4>
+                    <h4>Cerdas Calistung</h4>
                     <div class="price-original">Rp 300.000</div>
                     <div class="price-wrapper">
                         <span class="price-currency">Rp</span>
@@ -1151,14 +1282,14 @@
                             Modul & Lembar Kerja Kreatif
                         </li>
                     </ul>
-                    <a href="https://wa.me/6282224000610?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20Calistung"
+                    <a href="https://wa.me/6282224000510?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20Calistung"
                         target="_blank" class="btn-pricing">Daftar Calistung</a>
                 </div>
 
                 <!-- SD Pricing (Featured) -->
                 <div class="pricing-card featured">
                     <div class="popular-tag">Paling Populer</div>
-                    <h4>Program SD</h4>
+                    <h4>Cerdas SD</h4>
                     <div class="price-original">Rp 250.000</div>
                     <div class="price-wrapper">
                         <span class="price-currency">Rp</span>
@@ -1195,17 +1326,17 @@
                             Evaluasi Belajar Setiap Bulan
                         </li>
                     </ul>
-                    <a href="https://wa.me/6282224000610?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20SD"
+                    <a href="https://wa.me/6282224000510?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20SD"
                         target="_blank" class="btn-pricing">Daftar Program SD</a>
                 </div>
 
                 <!-- SMP Pricing -->
                 <div class="pricing-card">
-                    <h4>Program SMP</h4>
+                    <h4>Cerdas SMP</h4>
                     <div class="price-original">Rp 300.000</div>
                     <div class="price-wrapper">
                         <span class="price-currency">Rp</span>
-                        <span class="price-amount">200K</span>
+                        <span class="price-amount">250K</span>
                         <span class="price-period">/ Bulan</span>
                     </div>
                     <ul class="pricing-features">
@@ -1238,8 +1369,96 @@
                             Kumpulan Soal Eksakta HOTS
                         </li>
                     </ul>
-                    <a href="https://wa.me/6282224000610?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20SMP"
+                    <a href="https://wa.me/6282224000510?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20SMP"
                         target="_blank" class="btn-pricing">Daftar Program SMP</a>
+                </div>
+
+                <!-- Cerdas Matematika Pricing -->
+                <div class="pricing-card">
+                    <div class="popular-tag" style="background-color: var(--primary); color: var(--white);">Eksklusif</div>
+                    <h4>Cerdas Matematika</h4>
+                    <div class="price-original">Rp 300.000</div>
+                    <div class="price-wrapper">
+                        <span class="price-currency">Rp</span>
+                        <span class="price-amount">250K</span>
+                        <span class="price-period">/ Bulan</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pertemuan 3x Seminggu
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Metode Trik Hitung Cepat
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pembahasan Soal Logika HOTS
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Maksimal 6 Siswa per Kelas
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6282224000510?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20Cerdas%20Matematika"
+                        target="_blank" class="btn-pricing">Daftar Matematika</a>
+                </div>
+
+                <!-- Cerdas Komputer Pricing -->
+                <div class="pricing-card">
+                    <div class="popular-tag" style="background-color: var(--primary); color: var(--white);">Eksklusif</div>
+                    <h4>Cerdas Komputer</h4>
+                    <div class="price-original">Rp 300.000</div>
+                    <div class="price-wrapper">
+                        <span class="price-currency">Rp</span>
+                        <span class="price-amount">250K</span>
+                        <span class="price-period">/ Bulan</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pertemuan 2x Seminggu
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Dasar Coding & Logika Scratch
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Desain Grafis Canva & Office
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Fasilitas Laptop / PC per Anak
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6282224000510?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20Cerdas%20Komputer"
+                        target="_blank" class="btn-pricing">Daftar Komputer</a>
                 </div>
             </div>
         </section>
@@ -1322,25 +1541,25 @@
                 // Target is the end of today (23:59:59)
                 const target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
                 let diff = target - now;
-                
+
                 if (diff <= 0) {
                     // Fallback reset for next day
                     diff = 24 * 60 * 60 * 1000;
                 }
-                
+
                 const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                
+
                 document.getElementById('hours').innerText = String(hours).padStart(2, '0');
                 document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
                 document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
             }
-            
+
             updateTimer();
             setInterval(updateTimer, 1000);
         }
-        
+
         document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
 
