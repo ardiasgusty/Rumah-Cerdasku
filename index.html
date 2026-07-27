@@ -483,27 +483,34 @@
             color: var(--secondary);
         }
 
-        .card.eksklusif::before {
-            background-color: var(--secondary);
+        .card.matematika::before {
+            background-color: #2563EB;
+        }
+
+        .card.komputer::before {
+            background-color: #059669;
         }
 
         .card.matematika .card-icon {
-            background-color: rgba(139, 21, 39, 0.1);
-            color: var(--secondary);
+            background-color: rgba(37, 99, 235, 0.1);
+            color: #2563EB;
         }
 
         .card.komputer .card-icon {
-            background-color: rgba(26, 52, 73, 0.1);
-            color: var(--primary);
+            background-color: rgba(5, 150, 105, 0.1);
+            color: #059669;
         }
 
-        .card.eksklusif ul li svg {
-            color: var(--secondary);
+        .card.matematika ul li svg {
+            color: #2563EB;
+        }
+
+        .card.komputer ul li svg {
+            color: #059669;
         }
 
         .eks-badge {
             align-self: flex-start;
-            background-color: var(--secondary);
             color: var(--white);
             font-size: 11px;
             font-weight: 700;
@@ -512,7 +519,16 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 12px;
-            box-shadow: 0 2px 4px rgba(139, 21, 39, 0.2);
+        }
+
+        .card.matematika .eks-badge {
+            background-color: #2563EB;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+        }
+
+        .card.komputer .eks-badge {
+            background-color: #059669;
+            box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
         }
 
         /* Biaya (Pricing) Section - NEW */
@@ -540,9 +556,10 @@
         .pricing-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px 30px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 40px;
+            padding: 20px 0;
         }
 
         .pricing-card {
@@ -1027,7 +1044,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3>Program Calistung</h3>
+                    <h3>Cerdas Calistung</h3>
                     <p>Metode belajar membaca, menulis, dan berhitung yang interaktif dan ramah anak untuk usia
                         prasekolah & TK.</p>
                     <ul>
@@ -1037,7 +1054,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Mengenal Huruf & Suku Kata
+                            Mengenal Huruf & Membaca Lancar
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1045,7 +1062,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Membaca Tanpa Mengeja
+                            Latihan Menulis Rapi
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1053,7 +1070,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Menulis Huruf & Angka Rapi
+                            Berhitung Dasar (Tambah & Kurang)
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1061,7 +1078,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Berhitung Dasar Ceria
+                            Permainan Logika Sederhana
                         </li>
                     </ul>
                 </div>
@@ -1080,7 +1097,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3>Program SD</h3>
+                    <h3>Cerdas SD</h3>
                     <p>Pendampingan belajar intensif Kelas 1 - 6 SD untuk pemahaman materi harian, PR, serta persiapan
                         ujian.</p>
                     <ul>
@@ -1090,7 +1107,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Matematika & IPAS
+                            Matematika SD
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1098,7 +1115,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Bahasa Indonesia & Inggris
+                            Ilmu Pengetahuan Alam (IPA)
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1106,7 +1123,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Pendampingan PR Sekolah
+                            Bahasa Indonesia & Tematik
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1114,7 +1131,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Persiapan Ulangan Harian & Ujian
+                            Bahasa Inggris Dasar
                         </li>
                     </ul>
                 </div>
@@ -1130,7 +1147,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3>Program SMP</h3>
+                    <h3>Cerdas SMP</h3>
                     <p>Fokus bimbingan mendalam Kelas 7 - 9 SMP untuk mematangkan materi pelajaran eksakta dan persiapan
                         ujian kelulusan.</p>
                     <ul>
@@ -1140,7 +1157,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Matematika & IPA
+                            Matematika Lanjutan
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1148,7 +1165,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Bahasa Indonesia & Inggris
+                            Fisika & Biologi (IPA Terpadu)
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1156,7 +1173,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Pendampingan PR Sekolah
+                            Bahasa Inggris & Grammar
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -1164,7 +1181,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Persiapan Ulangan Harian & Ujian
+                            Persiapan Ujian Akhir
                         </li>
                     </ul>
                 </div>
@@ -1345,14 +1362,14 @@
                                 stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Pertemuan 4x Seminggu
+                            Pertemuan 3x Seminggu
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Pendampingan PR
+                            Pendampingan PR & Tugas Tematik
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1388,7 +1405,7 @@
                                 stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Pertemuan 4x Seminggu
+                            Pertemuan 3x Seminggu
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1604,12 +1621,14 @@
         }
 
         // Back to Top functionality
-        const backToTopBtn = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
+            const backToTopBtn = document.getElementById('backToTop');
+            if (backToTopBtn) {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
             }
         });
 
