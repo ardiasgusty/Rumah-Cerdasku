@@ -574,7 +574,16 @@
             transform: scale(1.03) translateY(-8px);
         }
 
-        .pricing-card.featured .popular-tag {
+        .pricing-card.eksklusif-card {
+            border: 2px solid var(--primary);
+            transform: scale(1.03);
+        }
+
+        .pricing-card.eksklusif-card:hover {
+            transform: scale(1.03) translateY(-8px);
+        }
+
+        .pricing-card .popular-tag {
             position: absolute;
             top: -14px;
             left: 50%;
@@ -587,17 +596,18 @@
             border-radius: 50px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            z-index: 2;
         }
 
         .pricing-card h4 {
             font-size: 22px;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
 
         .price-wrapper {
-            margin-bottom: 30px;
-            padding-bottom: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
             border-bottom: 1px solid rgba(26, 52, 73, 0.08);
         }
 
@@ -855,9 +865,41 @@
         .price-original {
             text-decoration: line-through;
             color: #94a3b8;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: var(--secondary);
+            color: var(--white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border: 2px solid var(--white);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary);
+            transform: translateY(-4px);
         }
 
         .countdown-container {
@@ -1239,7 +1281,8 @@
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                         d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                              Biaya Pendaftaran Pertama: <span style="text-decoration: line-through; color: #94a3b8; font-weight: 500; margin: 0 6px;">Rp 150.000</span> <strong style="color: var(--secondary); font-size: 1.15em;">Rp 50.000</strong> (Sudah Termasuk Buku & Welcome Kit)
+                </svg>
+                Biaya Pendaftaran Pertama: <strong style="color: var(--secondary); font-size: 1.15em;">Rp 50.000</strong> (Sudah Termasuk Buku & Welcome Kit)
             </div>
 
             <div class="pricing-container">
@@ -1374,7 +1417,7 @@
                 </div>
 
                 <!-- Cerdas Matematika Pricing -->
-                <div class="pricing-card">
+                <div class="pricing-card eksklusif-card">
                     <div class="popular-tag" style="background-color: var(--primary); color: var(--white);">Eksklusif</div>
                     <h4>Cerdas Matematika</h4>
                     <div class="price-original">Rp 300.000</div>
@@ -1418,7 +1461,7 @@
                 </div>
 
                 <!-- Cerdas Komputer Pricing -->
-                <div class="pricing-card">
+                <div class="pricing-card eksklusif-card">
                     <div class="popular-tag" style="background-color: var(--primary); color: var(--white);">Eksklusif</div>
                     <h4>Cerdas Komputer</h4>
                     <div class="price-original">Rp 300.000</div>
@@ -1560,8 +1603,36 @@
             setInterval(updateTimer, 1000);
         }
 
-        document.addEventListener('DOMContentLoaded', startCountdown);
+        // Back to Top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+        });
     </script>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <!-- Chevron Up SVG -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" style="stroke-width: 3;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </div>
 
 </body>
 
