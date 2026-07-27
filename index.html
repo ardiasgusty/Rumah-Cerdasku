@@ -729,6 +729,58 @@
             }
         }
 
+        /* Social Note Card */
+        .social-note-card {
+            background-color: rgba(212, 157, 53, 0.05);
+            border: 2px dashed rgba(212, 157, 53, 0.25);
+            border-radius: var(--radius-md);
+            padding: 30px 40px;
+            max-width: 800px;
+            margin: 50px auto 0 auto;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .social-note-badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 13px;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 8px rgba(212, 157, 53, 0.15);
+        }
+
+        .social-note-card p {
+            color: var(--primary);
+            font-size: 16px;
+            line-height: 1.65;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .social-note-card .social-note-sub {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 0;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .social-note-card {
+                padding: 24px 20px;
+                margin: 40px 5% 0 5%;
+            }
+            .social-note-card p {
+                font-size: 14px;
+            }
+        }
+
         /* Biaya (Pricing) Section - NEW */
         .pricing-section {
             padding: 100px 5%;
@@ -1939,6 +1991,17 @@
                     <a href="https://wa.me/6282224000510?text=Halo%20Rumah%20Cerdasku%2C%20saya%20tertarik%20mendaftar%20Program%20Cerdas%20Komputer"
                         target="_blank" class="btn-pricing">Daftar Komputer</a>
                 </div>
+            </div>
+
+            <!-- Social Program Note Card -->
+            <div class="social-note-card">
+                <div class="social-note-badge">💝 Program Cerdas Berbagi</div>
+                <p>
+                    Sebagai wujud kepedulian sosial, kami menyediakan <strong>kuota GRATIS (1 slot di setiap kelas)</strong> khusus bagi adik-adik <strong>yatim piatu</strong> dan anak-anak dari <strong>keluarga kurang mampu (pra-sejahtera)</strong>.
+                </p>
+                <p class="social-note-sub">
+                    Mari bersama-sama saling mendukung pendidikan anak bangsa. Silakan hubungi WhatsApp Admin kami secara privat untuk pendaftaran & konfirmasi berkas.
+                </p>
             </div>
         </section>
 
