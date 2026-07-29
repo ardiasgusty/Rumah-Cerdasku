@@ -248,11 +248,12 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #203f59 100%);
-            padding: 120px 5% 100px 5%;
-            text-align: center;
+            padding: 140px 5% 100px 5%;
             color: var(--white);
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
         }
 
         /* Decorative background shapes for Premium look */
@@ -280,11 +281,23 @@
             z-index: 1;
         }
 
-        .hero-content {
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: left;
             position: relative;
             z-index: 2;
-            max-width: 100%;
-            margin: 0 auto;
+        }
+
+        .hero-content {
+            flex: 1 1 55%;
+            max-width: 680px;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -306,9 +319,39 @@
             margin-bottom: 40px;
             color: rgba(255, 255, 255, 0.9);
             font-weight: 500;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 620px;
+        }
+
+        .hero-image-container {
+            flex: 1 1 40%;
+            max-width: 480px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+            animation: floatHero 6s ease-in-out infinite;
+        }
+
+        @keyframes floatHero {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         .btn-primary {
@@ -1156,6 +1199,34 @@
         }
 
         @media (max-width: 992px) {
+            .hero {
+                padding: 100px 5% 60px 5%;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero p {
+                margin: 0 auto 30px auto;
+            }
+
+            .hero-image-container {
+                max-width: 380px;
+                margin: 0 auto;
+                justify-content: center;
+            }
+
             .hero h1 {
                 font-size: 42px;
             }
@@ -1223,11 +1294,15 @@
             }
 
             .hero {
-                padding: 80px 24px 60px 24px;
+                padding: 80px 24px 40px 24px;
+            }
+
+            .hero-image-container {
+                max-width: 280px;
             }
 
             .hero h1 {
-                font-size: 34px;
+                font-size: 32px;
             }
 
             .hero p {
@@ -1420,17 +1495,23 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
-                <h1>Karena Setiap Anak Berhak Mendapat <span>Penjelasan Terbaik 🚀</span></h1>
-                <p>Pendampingan belajar dengan kelompok kecil dan pembelajaran yang lebih detail, sehingga anak memahami
-                    materi, lebih percaya diri, dan siap menghadapi tugas maupun ujian di sekolah.</p>
-                <a href="#daftar" class="btn-primary">
-                    Mulai Belajar Sekarang
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg" style="stroke-width:2.5;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </a>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Karena Setiap Anak Berhak Mendapat <span>Penjelasan Terbaik 🚀</span></h1>
+                    <p>Pendampingan belajar dengan kelompok kecil dan pembelajaran yang lebih detail, sehingga anak
+                        memahami
+                        materi, lebih percaya diri, dan siap menghadapi tugas maupun ujian di sekolah.</p>
+                    <a href="#daftar" class="btn-primary">
+                        Mulai Belajar Sekarang
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" style="stroke-width:2.5;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-image-container">
+                    <img src="assets/img/rumahcerdasku-min.png" alt="Siswa Rumah Cerdasku" class="hero-img">
+                </div>
             </div>
         </section>
 
